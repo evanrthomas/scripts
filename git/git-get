@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# turn https://github.com/jaspervdj/websockets/blob/master/example/client.html
+# into https://raw.githubusercontent.com/jaspervdj/websockets/master/example/client.html
+
+orig=$1
+result=${orig/github.com/raw.githubusercontent.com}
+result=${result/blob\//}
+wget "$result"
